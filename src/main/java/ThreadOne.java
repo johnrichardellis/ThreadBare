@@ -26,10 +26,15 @@ public class ThreadOne implements Runnable {
 
 class MultiThread {
     public static void main(String args[]) {
-        Experiment("One", 10000);
-        Experiment("Two", 5000);
-        Experiment("Three", 500);
+        Experiment("One", 10000);   // highest sleep time
+        Experiment("Two", 5000);    // middle sleep time
+        Experiment("Three", 500);   // shortest sleep time
     }
+
+    // 3 experiments run, each experiment sleeps for a different amount of time
+    // each experiment creates 3 similar threads
+    // each thread counts down from 5 to 1 and then exits
+    // they run concurrently and sometimes count at different paces
 
     private static void Experiment(String name, Integer limit) {
         System.out.println("\n\nExperiment "+name);

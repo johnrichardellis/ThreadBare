@@ -38,3 +38,9 @@ public class ThreadTwo  extends Thread {
 
     }
 }
+
+
+// 4 threads are created in order t1, t2, t3, and t4
+// sleep for one second
+// sleep for 5 seconds
+// threads end in various order
